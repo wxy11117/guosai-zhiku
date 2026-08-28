@@ -1,0 +1,162 @@
+[
+  {
+    "order": 1,
+    "title": "第1讲 教材和参考资料",
+    "original_file": "第1讲 教材和参考资料.rar",
+    "file": "lesson-01-textbooks.rar",
+    "bytes": 119159653,
+    "sha256": "6117817d782ccafa5ab8b95e37e0418ae3981fb08657c3caef09305feea0eab7"
+  },
+  {
+    "order": 2,
+    "title": "第2讲 层次分析法",
+    "original_file": "第2讲 层次分析法.rar",
+    "file": "lesson-02-ahp.rar",
+    "bytes": 6767578,
+    "sha256": "0205d60396bb8c254fa2fde2e04b8e951e63b004e36599c74cfd917a412839da"
+  },
+  {
+    "order": 3,
+    "title": "第3讲 模糊综合评价",
+    "original_file": "第3讲 模糊综合评价.rar",
+    "file": "lesson-03-fuzzy-evaluation.rar",
+    "bytes": 6627680,
+    "sha256": "e505baf6c2e0d1cacae7fc4f8fe64a163bc92ced37372cdb276d065709fb5e45"
+  },
+  {
+    "order": 4,
+    "title": "第4讲 熵权法",
+    "original_file": "第4讲 熵权法.rar",
+    "file": "lesson-04-entropy-weight.rar",
+    "bytes": 5359024,
+    "sha256": "ae164da5fa7e026e8a64f3ef401bac1eb8351b6a65d3b37765fc972a904eb340"
+  },
+  {
+    "order": 5,
+    "title": "第5讲 TOPSIS",
+    "original_file": "第5讲 Topsis.rar",
+    "file": "lesson-05-topsis.rar",
+    "bytes": 7067999,
+    "sha256": "8dedf487272ffabcdf95b866805a48a54e590c9886e288be8e8e8b5be5299b21"
+  },
+  {
+    "order": 6,
+    "title": "第6讲 灰色关联分析",
+    "original_file": "第6讲 灰色关联分析.rar",
+    "file": "lesson-06-grey-relational-analysis.rar",
+    "bytes": 1481888,
+    "sha256": "8d0a547d87879a8e463ecb59adb4c689c3cd2a154cee360ac458889aeb674886"
+  },
+  {
+    "order": 7,
+    "title": "第7讲 线性规划",
+    "original_file": "第7讲 线性规划.rar",
+    "file": "lesson-07-linear-programming.rar",
+    "bytes": 1391163,
+    "sha256": "5740484f436b532a85cd5e37b7b1d91c23c09ae5feb73a246758ca58a6548f78"
+  },
+  {
+    "order": 8,
+    "title": "第8讲 整数规划",
+    "original_file": "第8讲 整数规划.rar",
+    "file": "lesson-08-integer-programming.rar",
+    "bytes": 1436700,
+    "sha256": "81b4edb1ec8ac37ba5ef9d7ae62f0a479f086719af57d7080532d67140848c13"
+  },
+  {
+    "order": 9,
+    "title": "第9讲 非线性规划",
+    "original_file": "第9讲 非线性规划.rar",
+    "file": "lesson-09-nonlinear-programming.rar",
+    "bytes": 1764294,
+    "sha256": "5aba0e7afda8182bc36d89b958c53b2654bedd0114d240631d933bbe6312311d"
+  },
+  {
+    "order": 10,
+    "title": "第10讲 图论与最短路径算法",
+    "original_file": "第10讲 图论与最短路径算法.rar",
+    "file": "lesson-10-graph-shortest-path.rar",
+    "bytes": 5594719,
+    "sha256": "93940ff5bebeac353025a5aa310800de99b5c832417b0f934569406bb80f2938"
+  },
+  {
+    "order": 11,
+    "title": "第11讲 网络最大流问题",
+    "original_file": "第11讲 网络最大流问题.rar",
+    "file": "lesson-11-maximum-flow.rar",
+    "bytes": 1228359,
+    "sha256": "db192d254302858b8dd6e1cac7d7e55a58205865fabbd6d9613ba91da8f58e79"
+  },
+  {
+    "order": 12,
+    "title": "第12讲 最小费用最大流问题",
+    "original_file": "第12讲 最小费用最大流问题.rar",
+    "file": "lesson-12-min-cost-max-flow.rar",
+    "bytes": 1930513,
+    "sha256": "2825d5279dbbd1a2602af17d4c18fb3b1758a430eb943d73895eca07e288dc1e"
+  },
+  {
+    "order": 13,
+    "title": "第13讲 旅行商（TSP）问题",
+    "original_file": "第13讲 旅行商(TSP)问题.rar",
+    "file": "lesson-13-tsp.rar",
+    "bytes": 876424,
+    "sha256": "71e1aa4984531944bc4fdc6bca38ff8c3b1affdfb3d6e2f64e6ae7c1fbc552f5"
+  },
+  {
+    "order": 14,
+    "title": "第14讲 插值算法",
+    "original_file": "第14讲 插值算法.rar",
+    "file": "lesson-14-interpolation.rar",
+    "bytes": 2379583,
+    "sha256": "4c34c844406aa75daace092abb0e0b72348de57af650eef766e6c227ea15d2d6"
+  },
+  {
+    "order": 15,
+    "title": "第15讲 拟合算法",
+    "original_file": "第15讲 拟合算法.rar",
+    "file": "lesson-15-curve-fitting.rar",
+    "bytes": 1347360,
+    "sha256": "bb1582910e54bf4fce0495e9a842f6c94bd8f03a0384370672b79b2f7afd9879"
+  },
+  {
+    "order": 16,
+    "title": "第16讲 微分方程",
+    "original_file": "第16讲 微分方程.rar",
+    "file": "lesson-16-differential-equations.rar",
+    "bytes": 7079550,
+    "sha256": "11bf2a8633f7f1387321a97582ced3b497dfbbbe820c507e1929d6290247fae3"
+  },
+  {
+    "order": 17,
+    "title": "第17讲 时间序列",
+    "original_file": "第17讲 时间序列.rar",
+    "file": "lesson-17-time-series.rar",
+    "bytes": 311084924,
+    "sha256": "6e065e9457dcf0bcd489c8ca7c1a0aaa7f51649fd00eea781aa402795fe1e4ad"
+  },
+  {
+    "order": 18,
+    "title": "第18讲 聚类分析",
+    "original_file": "第18讲 聚类分析.rar",
+    "file": "lesson-18-clustering.rar",
+    "bytes": 1710099,
+    "sha256": "21709167b42c788aea22aa888f2525c42f38c14845d305051754785decb2c233"
+  },
+  {
+    "order": 19,
+    "title": "智能算法课程包",
+    "original_file": "智能算法.rar",
+    "file": "intelligent-algorithms.rar",
+    "bytes": 9122802,
+    "sha256": "c1ce967100dff7de8c19d60af2347b76147442cd1fdde7ac1211bd776c739dd5"
+  },
+  {
+    "order": 20,
+    "title": "智能算法与保命指南",
+    "original_file": "智能算法与保命指南_20260824204507.pdf",
+    "file": "intelligent-algorithms-survival-guide.pdf",
+    "bytes": 2209052,
+    "sha256": "3c2957fb9421ed38f27c67fafcbef5e7729aa465621ee32076b855caf1076e9a"
+  }
+]

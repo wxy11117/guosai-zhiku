@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模评云 | 数学建模全自动评分</title>
+    <link rel="icon" href="assets/qions-model-logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=qions1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="模评云首页">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/qions-model-logo.png" alt="" />
+        </span>
+        <span>模评云</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#competitions">赛事入口</a>
+        <a href="#workflow">评分流程</a>
+        <a href="#evaluation">综合评价</a>
+        <a href="#ecosystem">技能生态</a>
+        <a href="#reference">成果图</a>
+        <a href="#platform">平台能力</a>
+        <a href="#trust">用户口碑</a>
+        <a href="download.html">软件下载</a>
+      </nav>
+      <a class="header-action" href="download.html">下载软件</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="assets/hero-dashboard.png" alt="" />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">面向 MCM/ICM、国赛、MathorCup、APMCM 等建模赛事</p>
+          <h1>让建模论文先完成一次可解释的自动评审</h1>
+          <p class="hero-copy">
+            上传论文、代码和附件后，系统从摘要质量、模型合理性、数据处理、求解深度、敏感性分析和格式规范多个维度生成评分，并给出奖项概率区间。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#upload">立即试评</a>
+            <a class="secondary-button" href="#competitions">查看赛事入口</a>
+          </div>
+          <div class="hero-metrics" aria-label="平台核心指标">
+            <div>
+              <strong>12+</strong>
+              <span>覆盖赛事</span>
+            </div>
+            <div>
+              <strong>15min</strong>
+              <span>初评反馈</span>
+            </div>
+            <div>
+              <strong>7</strong>
+              <span>格式规则源</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-band" aria-label="核心价值">
+        <div class="intro-text">
+          <span class="section-kicker">Auto Scoring</span>
+          <h2>不是简单查重，而是模拟评委的结构化评分过程</h2>
+        </div>
+        <div class="intro-grid">
+          <article>
+            <span class="mini-icon">01</span>
+            <h3>论文结构诊断</h3>
+            <p>识别摘要、问题重述、模型假设、符号说明、结果验证、参考文献等关键模块是否完整。</p>
+          </article>
+          <article>
+            <span class="mini-icon">02</span>
+            <h3>模型与算法评估</h3>
+            <p>结合题型识别、约束条件、目标函数、求解方法和代码附件，评估方案可信度。</p>
+          </article>
+          <article>
+            <span class="mini-icon">03</span>
+            <h3>奖项概率估价</h3>
+            <p>按竞赛历史评分偏好和论文风险项，输出特等奖、一等奖、二等奖、三等奖概率带。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="competition-hub" id="competitions">
+        <div class="section-heading">
+          <span class="section-kicker">Competitions</span>
+          <h2>覆盖 <mark>12+</mark> 数学建模竞赛</h2>
+          <p>每张卡片都是一个赛事入口，点击即可访问对应赛事官网或官方报名页。</p>
+        </div>
+        <div class="competition-grid">
+          <a class="competition-card" href="https://www.mcm.edu.cn/index.moma" target="_blank" rel="noreferrer">
+            <span class="card-symbol">C</span>
+            <h3>CUMCM</h3>
+            <p>全国大学生数学建模竞赛（国赛）</p>
+            <small>中文 · 官方站</small>
+          </a>
+          <a class="competition-card" href="https://www.comap.com/contests/mcm-icm" target="_blank" rel="noreferrer">
+            <span class="card-symbol">M</span>
+            <h3>MCM/ICM</h3>
+            <p>美国大学生数学建模竞赛（美赛）</p>
+            <small>English · COMAP</small>
+          </a>
+          <a class="competition-card" href="http://gmcm.seu.edu.cn/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">G</span>
+            <h3>华为杯</h3>
+            <p>中国研究生数学建模竞赛</p>
+            <small>中文 · 研究生</small>
+          </a>
+          <a class="competition-card" href="http://www.mathorcup.org/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">MC</span>
+            <h3>MathorCup</h3>
+            <p>高校数学建模挑战赛</p>
+            <small>中文 · 挑战赛</small>
+          </a>
+          <a class="competition-card" href="https://apmcm.org/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">A</span>
+            <h3>APMCM</h3>
+            <p>亚太地区大学生数学建模竞赛</p>
+            <small>中英 · 亚太赛</small>
+          </a>
+          <a class="competition-card" href="https://tjjmds.ai-learning.net/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">S</span>
+            <h3>统计建模</h3>
+            <p>全国大学生统计建模大赛</p>
+            <small>中文 · 数据分析</small>
+          </a>
+          <a class="competition-card highlighted" href="https://www.tipdmcup.cn/tdbtzsjs.jhtml" target="_blank" rel="noreferrer">
+            <span class="card-symbol">T</span>
+            <h3>泰迪杯</h3>
+            <p>数据挖掘挑战赛</p>
+            <small>中文 · 数据挖掘</small>
+          </a>
+          <a class="competition-card" href="https://www.tzmcm.cn/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">R</span>
+            <h3>认证杯</h3>
+            <p>数学中国数学建模网络挑战赛</p>
+            <small>中文 · 网络赛</small>
+          </a>
+          <a class="competition-card" href="https://51mcm.cumt.edu.cn/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">51</span>
+            <h3>五一杯</h3>
+            <p>五一数学建模竞赛</p>
+            <small>中文 · 联赛</small>
+          </a>
+          <a class="competition-card" href="https://www.nmmcm.org.cn/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">N</span>
+            <h3>数维杯</h3>
+            <p>全国大学生数学建模挑战赛</p>
+            <small>中文 · 挑战赛</small>
+          </a>
+          <a class="competition-card" href="https://m.saikr.com/mcmicm2026" target="_blank" rel="noreferrer">
+            <span class="card-symbol">H</span>
+            <h3>华数杯</h3>
+            <p>国际大学生数学建模竞赛</p>
+            <small>中英 · 赛氪页</small>
+          </a>
+          <a class="competition-card" href="https://www.cycmcm.com/" target="_blank" rel="noreferrer">
+            <span class="card-symbol">Y</span>
+            <h3>中青杯</h3>
+            <p>全国大学生数学建模竞赛</p>
+            <small>中文 · 青年赛</small>
+          </a>
+        </div>
+        <div class="pipeline-strip" aria-label="竞赛评分流程">
+          <span>COMPETITION PIPELINE</span>
+          <div>
+            <b>赛题分析</b>
+            <i></i>
+            <b>数学建模</b>
+            <i></i>
+            <b>编程求解</b>
+            <i></i>
+            <b>结果可视化</b>
+            <i></i>
+            <b>论文撰写</b>
+            <i></i>
+            <b>格式编译</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow">
+        <div class="workflow-inner">
+          <div class="section-heading left">
+            <span class="section-kicker">Workflow</span>
+            <h2>从上传到修订建议，形成闭环</h2>
+            <p>每份报告都会留下可追踪评分依据，适合赛前打磨、团队复盘和机构批量辅导。</p>
+          </div>
+          <div class="steps">
+            <article>
+              <span>1</span>
+              <h3>上传材料</h3>
+              <p>支持论文、代码、数据、图片和附件说明。</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>自动解析</h3>
+              <p>抽取题型、变量、模型、算法和关键结论。</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>多维评分</h3>
+              <p>按比赛规则生成总分、维度分和扣分理由。</p>
+            </article>
+            <article>
+              <span>4</span>
+              <h3>奖项估价</h3>
+              <p>输出奖项概率、冲奖短板和优先修改项。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="evaluation-lab" id="evaluation">
+        <div class="evaluation-head">
+          <span class="section-kicker">Evaluation Matrix</span>
+          <h2>不只是给分，<mark>六维同评</mark></h2>
+          <p>从建模逻辑到代码附件，从结果验证到论文呈现，自动拆解每份参赛论文的冲奖短板。</p>
+          <div class="evaluation-stats" aria-label="综合评价指标">
+            <div>
+              <strong>6</strong>
+              <span>核心维度</span>
+            </div>
+            <div>
+              <strong>42+</strong>
+              <span>细分检查项</span>
+            </div>
+            <div>
+              <strong>4轮</strong>
+              <span>自动复核</span>
+            </div>
+            <div>
+              <strong>≤15min</strong>
+              <span>生成报告</span>
+            </div>
+          </div>
+        </div>
+        <div class="evaluation-grid">
+          <article class="evaluation-card">
+            <span class="eval-icon blue">H</span>
+            <small>Model Logic</small>
+            <h3>假设合理性</h3>
+            <p>检查假设是否贴合题意、数据边界和现实约束，定位过强假设与缺失条件。</p>
+          </article>
+          <article class="evaluation-card featured">
+            <span class="eval-icon amber">I</span>
+            <small>Originality</small>
+            <h3>建模创新性</h3>
+            <p>评估模型结构、算法组合和指标体系是否具备差异化，而不是套用模板。</p>
+          </article>
+          <article class="evaluation-card">
+            <span class="eval-icon green">R</span>
+            <small>Validation</small>
+            <h3>结果正确性</h3>
+            <p>核对计算结果、误差分析、敏感性验证和结论支撑，识别关键数值风险。</p>
+          </article>
+          <article class="evaluation-card">
+            <span class="eval-icon violet">E</span>
+            <small>Expression</small>
+            <h3>表述清晰性</h3>
+            <p>分析摘要、章节衔接、符号说明和结论表达，让评委快速理解核心贡献。</p>
+          </article>
+          <article class="evaluation-card">
+            <span class="eval-icon rose">C</span>
+            <small>Reproducibility</small>
+            <h3>代码可复现性</h3>
+            <p>检查代码、数据、运行命令和附件说明是否足以复现实验与图表结果。</p>
+          </article>
+          <article class="evaluation-card">
+            <span class="eval-icon cyan">V</span>
+            <small>Visual Quality</small>
+            <h3>图文美观性</h3>
+            <p>评估图表可读性、排版一致性、标注完整度和页面观感，减少展示型失分。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="skill-ecosystem" id="ecosystem">
+        <div class="section-heading">
+          <span class="section-kicker">Skill Ecosystem</span>
+          <h2><mark>53+</mark> 可组合评分技能</h2>
+          <p>把数学建模作品的评价标准、自动评分步骤和竞赛规则库连成一张能力图，从上传材料到奖项估价形成完整闭环。</p>
+        </div>
+        <div class="ecosystem-chips" aria-label="技能类别">
+          <span><i class="blue"></i>赛题理解</span>
+          <span><i class="teal"></i>建模求解</span>
+          <span><i class="violet"></i>论文表达</span>
+          <span><i class="rose"></i>复现审查</span>
+          <span><i class="amber"></i>奖项估价</span>
+        </div>
+        <div class="ecosystem-map" aria-label="数学建模全自动评分技能生态图">
+          <svg class="ecosystem-lines" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="ecoLineBlue" x1="0" x2="1">
+                <stop offset="0" stop-color="#5b8cff" stop-opacity="0.06" />
+                <stop offset="1" stop-color="#19d5bf" stop-opacity="0.42" />
+              </linearGradient>
+              <linearGradient id="ecoLineAmber" x1="0" x2="1">
+                <stop offset="0" stop-color="#f4a51c" stop-opacity="0.08" />
+                <stop offset="1" stop-color="#8a5cf6" stop-opacity="0.34" />
+              </linearGradient>
+            </defs>
+            <line x1="500" y1="260" x2="90" y2="338" />
+            <line x1="500" y1="260" x2="180" y2="382" />
+            <line x1="500" y1="260" x2="255" y2="304" />
+            <line x1="500" y1="260" x2="340" y2="205" />
+            <line x1="500" y1="260" x2="430" y2="126" />
+            <line x1="500" y1="260" x2="570" y2="110" />
+            <line x1="500" y1="260" x2="682" y2="138" />
+            <line x1="500" y1="260" x2="825" y2="92" />
+            <line x1="500" y1="260" x2="884" y2="202" />
+            <line x1="500" y1="260" x2="870" y2="336" />
+            <line x1="500" y1="260" x2="720" y2="438" />
+            <line x1="500" y1="260" x2="548" y2="430" />
+            <line x1="500" y1="260" x2="390" y2="440" />
+            <line x1="500" y1="260" x2="266" y2="462" />
+            <line x1="90" y1="338" x2="255" y2="304" class="warm" />
+            <line x1="180" y1="382" x2="390" y2="440" class="warm" />
+            <line x1="340" y1="205" x2="570" y2="110" class="warm" />
+            <line x1="682" y1="138" x2="870" y2="336" class="warm" />
+            <line x1="266" y1="462" x2="884" y2="202" class="warm" />
+          </svg>
+          <div class="eco-core">
+            <strong>自动评分引擎</strong>
+            <span>六维同评 + 规则复核 + 奖项估价</span>
+          </div>
+          <span class="eco-node blue" style="--x: 9%; --y: 65%; --d: 0s">赛题分析</span>
+          <span class="eco-node teal" style="--x: 18%; --y: 73%; --d: .4s">数据清洗</span>
+          <span class="eco-node violet" style="--x: 25%; --y: 58%; --d: .8s">假设合理性</span>
+          <span class="eco-node amber" style="--x: 34%; --y: 40%; --d: .2s">模型建立</span>
+          <span class="eco-node teal" style="--x: 43%; --y: 24%; --d: .7s">算法求解</span>
+          <span class="eco-node blue" style="--x: 57%; --y: 22%; --d: 1s">结果正确性</span>
+          <span class="eco-node violet" style="--x: 68%; --y: 28%; --d: .3s">敏感性分析</span>
+          <span class="eco-node blue" style="--x: 82%; --y: 18%; --d: .9s">建模创新性</span>
+          <span class="eco-node rose" style="--x: 88%; --y: 39%; --d: .5s">代码复现</span>
+          <span class="eco-node amber" style="--x: 87%; --y: 64%; --d: .1s">图表生成</span>
+          <span class="eco-node violet" style="--x: 72%; --y: 84%; --d: .6s">表述清晰性</span>
+          <span class="eco-node teal" style="--x: 55%; --y: 82%; --d: 1.1s">图文美观性</span>
+          <span class="eco-node rose" style="--x: 39%; --y: 84%; --d: .2s">格式检查</span>
+          <span class="eco-node amber" style="--x: 27%; --y: 88%; --d: .8s">奖项估价</span>
+          <span class="eco-node rose" style="--x: 15%; --y: 32%; --d: .3s">匿名审查</span>
+          <span class="eco-node blue" style="--x: 31%; --y: 22%; --d: .9s">规则匹配</span>
+          <span class="eco-node violet" style="--x: 62%; --y: 70%; --d: .4s">引用规范</span>
+          <span class="eco-node teal" style="--x: 76%; --y: 53%; --d: .7s">修改建议</span>
+          <span class="eco-node amber" style="--x: 93%; --y: 70%; --d: 1.2s">报告导出</span>
+          <span class="eco-node blue" style="--x: 7%; --y: 84%; --d: .5s">附件审查</span>
+        </div>
+        <div class="ecosystem-flow" aria-label="全自动评分步骤">
+          <span>上传材料</span>
+          <i></i>
+          <span>解析结构</span>
+          <i></i>
+          <span>规则匹配</span>
+          <i></i>
+          <span>六维评分</span>
+          <i></i>
+          <span>风险定位</span>
+          <i></i>
+          <span>奖项估价</span>
+          <i></i>
+          <span>报告导出</span>
+        </div>
+      </section>
+
+      <section class="reference-showcase" id="reference">
+        <div class="paper-intro">
+          <span class="section-kicker">Reference Result</span>
+          <h2>基于 MathorCup 参考文档的成果图</h2>
+          <p>
+            参考文档给出了 MathorCup 论文与电子档提交规范，系统可把这些规则转成可检查的格式评分项，并在报告中标记扣分风险。
+          </p>
+          <div class="paper-meta">
+            <span>来源：Mathorcup.2026.B</span>
+            <span>页数：29 页 / 展示前 6 页</span>
+            <span>类型：论文格式与提交规范</span>
+          </div>
+          <a class="primary-button" href="assets/reference-paper.pdf" download>下载参考 PDF</a>
+        </div>
+        <div class="paper-stage" aria-label="参考文成果图">
+          <button class="stage-arrow stage-prev" type="button" aria-label="上一页">‹</button>
+          <figure class="paper-frame" aria-live="polite">
+            <img
+              id="paper-preview"
+              src="assets/reference-paper-page-1.png"
+              alt="MathorCup 2026 B 参考例文第 1 页预览"
+              data-page="1"
+            />
+            <figcaption class="paper-page-label" id="paper-page-label">1 / 6</figcaption>
+          </figure>
+          <button class="stage-arrow stage-next" type="button" aria-label="下一页">›</button>
+          <div class="paper-dots" aria-label="PDF 页码导航">
+            <button class="active" type="button" aria-label="第 1 页" data-page="0"></button>
+            <button type="button" aria-label="第 2 页" data-page="1"></button>
+            <button type="button" aria-label="第 3 页" data-page="2"></button>
+            <button type="button" aria-label="第 4 页" data-page="3"></button>
+            <button type="button" aria-label="第 5 页" data-page="4"></button>
+            <button type="button" aria-label="第 6 页" data-page="5"></button>
+          </div>
+        </div>
+        <div class="reference-rules">
+          <article>
+            <strong>题号一致</strong>
+            <p>报名系统选择的题号必须与论文内容一致，否则取消评奖资格。</p>
+          </article>
+          <article>
+            <strong>首页结构</strong>
+            <p>论文题目、摘要、关键词放在第一页，第二页为目录，正文起连续页码。</p>
+          </article>
+          <article>
+            <strong>匿名检查</strong>
+            <p>论文不能出现答题人身份、学校等个人信息，避免评审违规。</p>
+          </article>
+          <article>
+            <strong>引用规范</strong>
+            <p>正文引用处用方括号编号，如 [1][3]，参考文献按引用次序列出。</p>
+          </article>
+          <article>
+            <strong>附录材料</strong>
+            <p>附录应提供实际使用的软件名称、命令和全部源程序。</p>
+          </article>
+          <article>
+            <strong>文件命名</strong>
+            <p>论文 PDF、承诺书、支撑材料和计算结果需按题号与队号命名。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section estimate" id="estimate">
+        <div class="estimate-copy">
+          <span class="section-kicker">Award Forecast</span>
+          <h2>用评分区间判断是否值得继续冲奖</h2>
+          <p>拖动预估总分，查看系统如何把综合分映射为奖项概率。实际产品会结合比赛、赛题难度、论文风险项和队伍画像动态计算。</p>
+          <label class="score-slider">
+            <span>模拟总分 <strong id="score-value">83</strong></span>
+            <input id="score-input" type="range" min="40" max="100" value="83" />
+          </label>
+        </div>
+        <div class="award-board" aria-live="polite">
+          <div class="award-row">
+            <span>特等奖</span>
+            <div class="bar"><i id="bar-grand"></i></div>
+            <strong id="grand-value">8%</strong>
+          </div>
+          <div class="award-row">
+            <span>一等奖</span>
+            <div class="bar"><i id="bar-first"></i></div>
+            <strong id="first-value">31%</strong>
+          </div>
+          <div class="award-row">
+            <span>二等奖</span>
+            <div class="bar"><i id="bar-second"></i></div>
+            <strong id="second-value">44%</strong>
+          </div>
+          <div class="award-row">
+            <span>三等奖</span>
+            <div class="bar"><i id="bar-third"></i></div>
+            <strong id="third-value">17%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="report-demo" id="report">
+        <div class="section-heading">
+          <span class="section-kicker">Report Preview</span>
+          <h2>一份报告，直接告诉你先改哪里</h2>
+          <p>系统输出不只是一句“分数偏低”，而是把总分、奖项概率、扣分依据和修改优先级合在一张可复盘报告里。</p>
+        </div>
+        <div class="report-layout">
+          <div class="report-score-panel">
+            <span>模拟评分报告</span>
+            <strong>83.5</strong>
+            <p>综合评级：冲击一等奖区间</p>
+            <div class="report-probability">
+              <b>一等奖概率</b>
+              <i><span style="width: 31%"></span></i>
+              <em>31%</em>
+            </div>
+            <div class="report-probability">
+              <b>二等奖概率</b>
+              <i><span style="width: 44%"></span></i>
+              <em>44%</em>
+            </div>
+          </div>
+          <div class="report-radar" aria-label="六维评分雷达图">
+            <div class="radar-shape"></div>
+            <ul>
+              <li style="--x: 50%; --y: 0%">假设 86</li>
+              <li style="--x: 94%; --y: 24%">创新 79</li>
+              <li style="--x: 86%; --y: 78%">结果 88</li>
+              <li style="--x: 16%; --y: 78%">表述 82</li>
+              <li style="--x: 6%; --y: 24%">代码 76</li>
+            </ul>
+          </div>
+          <div class="report-actions">
+            <h3>优先修改建议</h3>
+            <article>
+              <span>高</span>
+              <p>补充敏感性分析与误差解释，避免结果正确但论证不足。</p>
+            </article>
+            <article>
+              <span>中</span>
+              <p>完善代码运行命令、数据路径和图表生成说明，提高可复现性。</p>
+            </article>
+            <article>
+              <span>中</span>
+              <p>把摘要结论前置，明确回答四个问题的核心数值结果。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="platform" id="platform">
+        <div class="platform-copy">
+          <span class="section-kicker">Console</span>
+          <h2>给选手、指导老师和机构都能用的评分后台</h2>
+          <p>页面模拟了批量评阅看板，突出进度、风险、维度分和修订建议，而不是只给一个孤立总分。</p>
+        </div>
+        <div class="dashboard-preview" aria-label="评分后台预览">
+          <div class="preview-top">
+            <span>批量评阅</span>
+            <strong>128 份报告</strong>
+          </div>
+          <div class="preview-grid">
+            <div class="score-card">
+              <span>平均分</span>
+              <strong>78.6</strong>
+            </div>
+            <div class="score-card accent">
+              <span>冲奖论文</span>
+              <strong>24</strong>
+            </div>
+            <div class="score-card">
+              <span>高风险项</span>
+              <strong>39</strong>
+            </div>
+          </div>
+          <div class="risk-list">
+            <p><span></span>模型假设缺少边界说明</p>
+            <p><span></span>敏感性分析与结果讨论断层</p>
+            <p><span></span>图表编号和正文引用不一致</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-wall" id="trust">
+        <div class="section-heading">
+          <span class="section-kicker">User Voice</span>
+          <h2>被越来越多的<mark>竞赛人</mark>选择</h2>
+          <p>从课程报告到建模竞赛，选手用它把更多时间留给模型、论证和复盘。</p>
+        </div>
+        <div class="trust-stats">
+          <article>
+            <strong>5000+</strong>
+            <span>累计用户</span>
+            <small>Active Users</small>
+          </article>
+          <article>
+            <strong>75%</strong>
+            <span>奖项估价准确率</span>
+            <small>Award Forecast</small>
+          </article>
+          <article>
+            <strong>12+</strong>
+            <span>支持竞赛</span>
+            <small>Competitions</small>
+          </article>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <b>”</b>
+            <p>赛前两天帮我们把摘要、图表和引用问题全标出来，最后修改方向很清楚。</p>
+            <div><span>L</span><strong>L 同学</strong><small>985 高校 · 本科</small></div>
+          </article>
+          <article class="testimonial-card">
+            <b>”</b>
+            <p>最有用的是六维评分和奖项概率，不再只凭感觉判断论文能不能冲奖。</p>
+            <div><span>陈</span><strong>陈队长</strong><small>MCM/ICM 参赛队</small></div>
+          </article>
+          <article class="testimonial-card">
+            <b>”</b>
+            <p>课程报告的资料检索、排版检查和修改建议节省了不少时间。</p>
+            <div><span>W</span><strong>W 同学</strong><small>双一流 · 本科</small></div>
+          </article>
+          <article class="testimonial-card">
+            <b>”</b>
+            <p>带学生做训练营时，批量看风险项比人工逐篇翻格式快很多。</p>
+            <div><span>张</span><strong>张老师</strong><small>理工院校 · 指导教师</small></div>
+          </article>
+          <article class="testimonial-card">
+            <b>”</b>
+            <p>国赛前帮我们把代码可复现和图文风格统一检查了一遍。</p>
+            <div><span>数</span><strong>数模小分队</strong><small>CUMCM 国赛队</small></div>
+          </article>
+          <article class="testimonial-card">
+            <b>”</b>
+            <p>它不会替我们建模，但能让我们快速发现论文表达和格式短板。</p>
+            <div><span>Z</span><strong>Z 同学</strong><small>研究生 · 建模队</small></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="download-cta" aria-label="软件下载">
+        <div>
+          <span class="section-kicker">Desktop App</span>
+          <h2>预留软件下载页面，后续可直接发布安装包</h2>
+          <p>下载页已经配置 Windows、macOS、Linux 三个平台入口，适合后续接入版本号、安装包、更新日志和校验值。</p>
+        </div>
+        <a class="primary-button" href="download.html">进入下载页</a>
+      </section>
+
+      <section class="upload" id="upload">
+        <div class="upload-panel">
+          <div>
+            <span class="section-kicker">Start</span>
+            <h2>上传一份论文，获得首轮评分报告</h2>
+            <p>当前为网站端演示，不会真正上传文件。你可以先选择比赛、题号和附件类型，后续网站只保留介绍、下载和预约入口，软件本体独立开发。</p>
+            <div class="contact-chip">联系邮箱：<a href="mailto:3981753393@qq.com">3981753393@qq.com</a></div>
+          </div>
+          <div class="upload-workbench">
+            <div class="upload-options">
+              <label>
+                <span>竞赛类型</span>
+                <select>
+                  <option>MathorCup 2026</option>
+                  <option>CUMCM 国赛</option>
+                  <option>MCM/ICM 美赛</option>
+                  <option>APMCM 亚太赛</option>
+                </select>
+              </label>
+              <label>
+                <span>题号</span>
+                <select>
+                  <option>B 题</option>
+                  <option>A 题</option>
+                  <option>C 题</option>
+                  <option>D 题</option>
+                </select>
+              </label>
+              <div class="upload-checks">
+                <label><input type="checkbox" checked /> 包含代码附件</label>
+                <label><input type="checkbox" checked /> 检查格式规范</label>
+                <label><input type="checkbox" /> 生成指导老师版报告</label>
+              </div>
+            </div>
+            <label class="drop-zone" for="paper-file">
+              <input id="paper-file" type="file" accept=".pdf,.doc,.docx,.zip" />
+              <span class="upload-icon">+</span>
+              <strong id="file-name">选择或拖放论文文件</strong>
+              <small>PDF / DOCX / ZIP</small>
+            </label>
+            <button class="primary-button fake-submit" type="button">生成评分报告</button>
+          </div>
+          <aside class="live-console" aria-label="实时评分数据与代码示例">
+            <div class="console-top">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>modelscore-agent</strong>
+            </div>
+            <div class="console-body">
+              <p><em>$</em> modelscore run --contest MathorCup2026 --problem B</p>
+              <p><b>[Parser]</b> 正在解析论文结构、摘要、公式与图表索引...</p>
+              <p><b>[Rubric]</b> 加载 6 维评分规则与 B 题格式检查项...</p>
+              <pre><code>score = evaluate(
+  paper="BMC2602161.pdf",
+  dimensions=[
+    "assumption",
+    "innovation",
+    "result",
+    "clarity",
+    "reproducibility",
+    "visual"
+  ]
+)</code></pre>
+              <div class="live-metrics">
+                <div><span>结构解析</span><i><mark style="width: 92%"></mark></i><strong>92%</strong></div>
+                <div><span>格式检查</span><i><mark style="width: 81%"></mark></i><strong>81%</strong></div>
+                <div><span>代码复现</span><i><mark style="width: 76%"></mark></i><strong>76%</strong></div>
+              </div>
+              <p><b>[Output]</b> 预计总分 83.5，一等奖概率 31%，已生成 3 条优先修改建议。</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>模评云</span>
+      <p>数学建模论文自动评分与奖项估价平台原型</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

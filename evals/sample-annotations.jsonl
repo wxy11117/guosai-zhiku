@@ -1,0 +1,1 @@
+{"case_id":"sample-001","paper":"../samples/paper.txt","problem":"../samples/problem.txt","code":"../samples/main.py","problem_id":"B","group":"本科生组","region":"江苏赛区","teacher_dimensions":{"假设合理性":92,"建模创新性":90,"结果正确性":95,"表述清晰性":88,"代码可复现性":65,"图文美观性":82},"teacher_high_risk_rule_ids":["CUMCM-REP-003"],"notes":"仅用于验证评测脚本，不代表真实教师评分。"}

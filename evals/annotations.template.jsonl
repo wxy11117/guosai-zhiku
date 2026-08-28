@@ -1,0 +1,1 @@
+{"case_id":"paper-001","teacher_annotation_status":"unlabeled","paper":"papers/paper-001.pdf","problem":"problems/B.pdf","code":"code/paper-001.zip","teacher_dimensions":{"假设合理性":null,"建模创新性":null,"结果正确性":null,"表述清晰性":null,"代码可复现性":null,"图文美观性":null},"teacher_high_risk_rule_ids":[],"notes":"请匿名化论文后填写；分数范围 0-100。完成全部适用维度与风险项后，将 teacher_annotation_status 改为 complete。"}

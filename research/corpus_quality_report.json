@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-13T06:17:59.360349+00:00",
+  "scope": "unlabeled pipeline quality; not model accuracy or teacher agreement",
+  "cases": [
+    {
+      "case_id": "cumcm-2022-b-national-second",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 24,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 92,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 88.0
+    },
+    {
+      "case_id": "cumcm-2022-c-national-second",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 30,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 77,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 91.9
+    },
+    {
+      "case_id": "cumcm-2023-a-national-first",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 27,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 218,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 89.2
+    },
+    {
+      "case_id": "cumcm-2024-a-national-first",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 26,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 314,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 88.8
+    },
+    {
+      "case_id": "cumcm-2025-b-national-first",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 36,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 82,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 96.2
+    },
+    {
+      "case_id": "cumcm-2025-c-provincial-first",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 31,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 172,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 93.8
+    },
+    {
+      "case_id": "cumcm-2025-b-jiangsu-third",
+      "status": "passed",
+      "checks": 42,
+      "cited_checks": 34,
+      "evidence_exact_match_rate": 1.0,
+      "warnings": [],
+      "elapsed_ms": 199,
+      "provider": "local-rules",
+      "score_is_unlabeled_diagnostic_only": 93.9
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "processed": 7,
+    "passed": 7,
+    "skipped": 0
+  }
+}

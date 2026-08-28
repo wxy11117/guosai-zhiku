@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>语料库管理 | 模评云智能体</title>
+  <link rel="icon" href="assets/qions-model-logo.png" type="image/png" />
+  <link rel="stylesheet" href="corpus.css?v=qions1" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="app.html"><img src="assets/qions-model-logo.png" alt="QIONS MODEL" style="width:142px;height:48px;object-fit:contain;object-position:center;border-radius:4px" /><strong style="display:none">模评云智能体</strong></a>
+    <nav><a href="app.html">工作流</a><a class="active" href="corpus.html">语料库</a><a href="knowledge.html">国赛智库</a></nav>
+    <span class="local-badge">仅本地研究</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">CUMCM EVALUATION CORPUS</p><h1>语料库治理与质检</h1><p>在论文进入评分模型前，完成来源追踪、文本质量、匿名化和代码材料检查。</p></div>
+      <button id="run-quality" class="primary">运行未标注批量质检</button>
+    </section>
+    <section id="stats" class="stats" aria-label="语料统计"></section>
+    <section class="notice"><strong>安全门禁</strong><span>原始材料禁止网页直访。只有文本质量可用且人工匿名化复核通过的案例，才会显示“允许发送给模型”。</span></section>
+    <section class="toolbar">
+      <div class="filters" id="filters">
+        <button class="active" data-filter="all">全部</button><button data-filter="pending">待复核</button><button data-filter="approved">已通过</button><button data-filter="ocr">需 OCR</button>
+      </div>
+      <span id="quality-summary">批量质检尚未运行</span>
+    </section>
+    <section class="table-wrap">
+      <table><thead><tr><th>案例</th><th>来源与奖项</th><th>文本</th><th>匿名化</th><th>代码材料</th><th>模型门禁</th></tr></thead><tbody id="case-list"></tbody></table>
+    </section>
+  </main>
+  <dialog id="review-dialog">
+    <form method="dialog" class="dialog-head"><div><p class="eyebrow">MANUAL REVIEW</p><h2 id="dialog-title">匿名化复核</h2></div><button value="cancel" aria-label="关闭">×</button></form>
+    <div id="dialog-content"></div>
+    <footer>
+      <label>复核备注<textarea id="review-notes" rows="3" placeholder="记录判断依据；不会发送到外部服务"></textarea></label>
+      <div><button id="save-review" class="secondary" type="button">保存为待处理</button><button id="approve-review" class="primary" type="button">确认匿名化并通过</button></div>
+    </footer>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="corpus.js?v=1"></script>
+</body>
+</html>

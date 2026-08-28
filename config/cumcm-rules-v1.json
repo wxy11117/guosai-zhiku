@@ -1,0 +1,19 @@
+{
+  "version": "cumcm-v1.0.0",
+  "description": "CUMCM 赛中诊断六维 42 项规则配置。修改后应运行评测集再发布。",
+  "minimum_score": 45.0,
+  "dimension_weights": {
+    "假设合理性": 0.17,
+    "建模创新性": 0.18,
+    "结果正确性": 0.22,
+    "表述清晰性": 0.15,
+    "代码可复现性": 0.15,
+    "图文美观性": 0.13
+  },
+  "rules": {
+    "CUMCM-RES-001": {"penalty": 6, "severity": "high"},
+    "CUMCM-RES-002": {"penalty": 6, "severity": "high"},
+    "CUMCM-REP-001": {"penalty": 7, "severity": "high"},
+    "CUMCM-VIS-007": {"penalty": 6, "severity": "high"}
+  }
+}

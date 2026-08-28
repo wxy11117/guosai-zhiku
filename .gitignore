@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.env
+data/tasks/
+data/research_corpus/
+data/modelscore.sqlite3*
+.server-*.log
+evals/papers/
+evals/problems/
+evals/code/
+evals/annotations.jsonl
+eval-results.json
+tmp/
+output/
+*-preview.png
+hyperframes-promo/

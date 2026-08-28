@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模评云智能体 | 数学建模评分软件</title>
+    <link rel="icon" href="assets/qions-model-logo.png" type="image/png" />
+    <link rel="stylesheet" href="app.css?v=qions1" />
+  </head>
+  <body>
+    <header class="agent-header">
+      <a class="agent-brand" href="#workflows" aria-label="模评云智能体">
+        <span><img src="assets/qions-model-logo.png" alt="" /></span>
+        <strong>模评云智能体</strong>
+      </a>
+      <nav class="agent-nav" aria-label="工作台导航">
+        <button class="nav-tab active" type="button" data-view="workflows">工作流</button>
+        <button class="nav-tab" type="button" data-view="create">新建</button>
+        <a class="nav-tab nav-link" href="corpus.html">语料库</a>
+        <a class="nav-tab nav-link" href="knowledge.html">国赛智库</a>
+      </nav>
+      <div class="header-actions">
+        <button class="service-status checking" id="service-status" type="button" title="正在检查本地评分服务">
+          <i></i><span>服务检查中</span>
+        </button>
+        <button class="date-button" id="calendar-toggle" type="button" aria-label="查看比赛日历">
+          <span id="today-month">05月</span>
+          <strong id="today-day">31</strong>
+        </button>
+        <div class="calendar-popover" id="calendar-popover" aria-label="数学建模比赛日历">
+          <div class="calendar-head">
+            <strong>比赛日历</strong>
+            <span>常见举办时间</span>
+          </div>
+          <div class="calendar-grid" id="calendar-grid"></div>
+        </div>
+        <div class="user-menu">
+          <button class="avatar-button" id="user-toggle" type="button" aria-label="打开用户菜单">
+            <span>云</span>
+          </button>
+          <div class="user-popover" id="user-popover" aria-label="用户窗口">
+            <div class="user-card">
+              <label class="user-avatar" for="avatar-input" title="点击上传头像">
+                <input id="avatar-input" type="file" accept="image/*" />
+                <span id="avatar-text">云</span>
+                <img id="avatar-image" alt="" />
+              </label>
+              <div>
+                <button class="name-edit-button" id="nickname-button" type="button" title="点击修改昵称">
+                  <strong class="rainbow-name" id="nickname-text">模评云用户</strong>
+                </button>
+                <small>用户ID：MYC-20260531-001</small>
+              </div>
+            </div>
+            <section class="menu-section">
+              <h3>个性化</h3>
+              <div class="theme-options" aria-label="主题设置">
+                <button class="active" type="button" data-theme="light">亮色</button>
+                <button type="button" data-theme="dark">夜间</button>
+                <button type="button" data-theme="eye">护眼</button>
+              </div>
+              <div class="name-style-picker" aria-label="炫彩昵称样式">
+                <button type="button" data-name-style="classic">
+                  <span class="name-preview classic">经典</span>
+                  <small>默认</small>
+                </button>
+                <button class="active" type="button" data-name-style="rainbow">
+                  <span class="name-preview rainbow">彩虹</span>
+                  <small>流光</small>
+                </button>
+                <button type="button" data-name-style="aurora">
+                  <span class="name-preview aurora">极光</span>
+                  <small>冷色</small>
+                </button>
+                <button type="button" data-name-style="sunset">
+                  <span class="name-preview sunset">落日</span>
+                  <small>暖色</small>
+                </button>
+              </div>
+            </section>
+            <nav class="user-links" aria-label="用户功能">
+              <button type="button" data-menu-action="export-records">导出记录</button>
+              <button type="button" data-menu-action="help">帮助与反馈</button>
+              <button type="button" data-menu-action="notice">平台公告</button>
+              <button type="button" data-menu-action="version">版本更新与查询</button>
+              <button type="button" data-menu-action="about">关于我们</button>
+            </nav>
+            <section class="account-section">
+              <h3>账号</h3>
+              <button type="button" data-menu-action="switch-account">切换账号</button>
+              <button class="logout-button" type="button" data-menu-action="logout">退出登录</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="agent-main">
+      <section class="view-section active" id="workflows" data-view-panel="workflows">
+        <div class="page-head">
+          <div>
+            <h1>工作流管理</h1>
+            <p>管理比赛期间诊断与赛后估奖流水线</p>
+          </div>
+          <div class="page-actions">
+            <button class="ghost-button" type="button">导入</button>
+            <button class="primary-button" type="button" data-view-trigger="create">+ 新建工作流</button>
+          </div>
+        </div>
+
+        <div class="segmented" aria-label="工作流筛选">
+          <button class="active" type="button" data-filter="all">全部 <span id="count-all">(2)</span></button>
+          <button type="button" data-filter="during">赛中诊断 <span id="count-during">(1)</span></button>
+          <button type="button" data-filter="after">赛后估奖 <span id="count-after">(1)</span></button>
+          <button type="button" data-filter="archived">归档 <span id="count-archived">(0)</span></button>
+        </div>
+
+        <section class="stats-grid" aria-label="任务统计">
+          <article>
+            <span>总计</span>
+            <strong id="stat-total">2</strong>
+          </article>
+          <article>
+            <span class="blue">运行中</span>
+            <strong id="stat-running">0</strong>
+          </article>
+          <article>
+            <span class="green">已完成</span>
+            <strong id="stat-completed">2</strong>
+          </article>
+          <article>
+            <span class="red">失败</span>
+            <strong id="stat-failed">0</strong>
+          </article>
+        </section>
+
+        <section class="table-card" aria-label="工作流列表">
+          <div class="table-head">
+            <label><input type="checkbox" /> 标题</label>
+            <span>类型</span>
+            <span>状态</span>
+            <span>创建时间</span>
+            <span>操作</span>
+          </div>
+          <div class="workflow-list" id="workflow-list"></div>
+        </section>
+
+        <footer class="agent-footer">
+          <p>© 2026 模评云 仅供学习交流使用</p>
+          <p>本地智能评审工作台 · SQLite 持久化 · 数据默认不离开本机</p>
+        </footer>
+      </section>
+
+      <section class="view-section create-view" id="create" data-view-panel="create">
+        <div class="create-shell">
+          <div class="page-head compact">
+            <div>
+              <h1>新建工作流</h1>
+              <p>配置并启动数学建模论文分析或估奖流水线</p>
+            </div>
+          </div>
+
+          <section class="panel">
+            <h2>智能体功用</h2>
+            <div class="mode-switch" role="tablist" aria-label="智能体模式">
+              <button class="active" type="button" data-mode="during">赛中诊断</button>
+              <button type="button" data-mode="after">赛后估奖</button>
+            </div>
+            <div class="mode-explain" id="mode-explain">
+              <strong>比赛期间</strong>
+              <p>用户上传论文初稿、代码和数据后，先执行本地 42 项规则检查；配置有效 API Key 时再由 ChatGPT 复核高风险项。</p>
+            </div>
+          </section>
+
+          <section class="template-grid" aria-label="赛事模板">
+            <div>
+              <h2>中文赛项</h2>
+              <div class="template-list" id="cn-template-list"></div>
+            </div>
+            <div>
+              <h2>英文赛项</h2>
+              <div class="template-list" id="en-template-list"></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2>比赛参数</h2>
+            <form class="create-form" id="agent-form">
+              <label>
+                题号
+                <input id="problem-input" type="text" placeholder="例如：A、B、C、D" value="B" />
+              </label>
+              <div class="group-tabs" aria-label="参赛组别">
+                <button class="active" type="button" data-group="本科生组">本科生组</button>
+                <button type="button" data-group="研究生组">研究生组</button>
+                <button type="button" data-group="专科组">专科组</button>
+              </div>
+              <label class="region-field" id="region-field">
+                赛区
+                <select id="region-select">
+                  <option value="北京">北京赛区</option>
+                  <option value="天津">天津赛区</option>
+                  <option value="河北">河北赛区</option>
+                  <option value="山西">山西赛区</option>
+                  <option value="内蒙古">内蒙古赛区</option>
+                  <option value="辽宁">辽宁赛区</option>
+                  <option value="吉林">吉林赛区</option>
+                  <option value="黑龙江">黑龙江赛区</option>
+                  <option value="上海">上海赛区</option>
+                  <option value="江苏">江苏赛区</option>
+                  <option value="浙江">浙江赛区</option>
+                  <option value="安徽">安徽赛区</option>
+                  <option value="福建">福建赛区</option>
+                  <option value="江西">江西赛区</option>
+                  <option value="山东">山东赛区</option>
+                  <option value="河南">河南赛区</option>
+                  <option value="湖北">湖北赛区</option>
+                  <option value="湖南">湖南赛区</option>
+                  <option value="广东">广东赛区</option>
+                  <option value="广西">广西赛区</option>
+                  <option value="海南">海南赛区</option>
+                  <option value="重庆">重庆赛区</option>
+                  <option value="四川">四川赛区</option>
+                  <option value="贵州">贵州赛区</option>
+                  <option value="云南">云南赛区</option>
+                  <option value="陕西">陕西赛区</option>
+                  <option value="甘肃">甘肃赛区</option>
+                  <option value="青海">青海赛区</option>
+                  <option value="宁夏">宁夏赛区</option>
+                  <option value="新疆">新疆赛区</option>
+                </select>
+              </label>
+              <label>
+                审查模式
+                <select id="review-mode">
+                  <option value="strict">严格：完整审查 + 自修复建议</option>
+                  <option value="quick">快速：省略部分格式细查</option>
+                </select>
+              </label>
+              <label class="file-card" for="problem-file">
+                <input id="problem-file" type="file" accept=".pdf,.docx,.txt" />
+                <span>上传赛题文件</span>
+                <strong id="problem-name">选择赛题 PDF / DOCX / TXT</strong>
+              </label>
+              <label class="file-card" for="paper-file">
+                <input id="paper-file" type="file" accept=".pdf,.docx,.txt" />
+                <span>上传论文初稿</span>
+                <strong id="paper-name">选择 PDF / DOCX</strong>
+              </label>
+              <label class="file-card" for="code-file">
+                <input id="code-file" type="file" accept=".zip,.py,.m,.ipynb,.txt" />
+                <span>上传代码与数据</span>
+                <strong id="code-name">选择 ZIP / 代码文件</strong>
+              </label>
+              <label class="file-card" for="extra-file">
+                <input id="extra-file" type="file" accept=".pdf,.docx,.csv,.txt,.zip,.json" />
+                <span>上传其他文件</span>
+                <strong id="extra-name">供大模型参照分析</strong>
+              </label>
+              <section class="upload-inspector" aria-label="上传解析状态">
+                <div class="upload-inspector-head">
+                  <h3>上传解析状态</h3>
+                  <span id="upload-ready-count">0/4 已就绪</span>
+                </div>
+                <div class="upload-status-list" id="upload-status-list"></div>
+              </section>
+              <button class="primary-button form-submit" type="submit">启动智能体分析</button>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <section class="view-section detail-view" id="detail" data-view-panel="detail">
+        <div class="detail-shell">
+          <div class="page-head detail-head">
+            <div>
+              <button class="back-button" id="detail-back" type="button">返回工作流</button>
+              <h1 id="detail-title">工作流详情</h1>
+              <p id="detail-subtitle">查看任务材料、分析进度和报告结果</p>
+            </div>
+            <div class="page-actions">
+              <button class="ghost-button" type="button" id="detail-export-json">导出 JSON</button>
+              <button class="primary-button" type="button" id="detail-export-report">导出报告</button>
+            </div>
+          </div>
+
+          <section class="panel realtime-panel" aria-label="实时解析进度">
+            <div class="realtime-topline">
+              <div>
+                <h2>实时解析进度</h2>
+                <p id="runtime-id">任务编号：等待生成</p>
+              </div>
+              <strong id="runtime-percent">0%</strong>
+            </div>
+            <div class="runtime-bar" aria-hidden="true"><i id="runtime-bar-fill"></i></div>
+            <div class="runtime-grid">
+              <article>
+                <h3>流水线步骤</h3>
+                <div class="runtime-steps" id="runtime-steps"></div>
+              </article>
+              <article>
+                <h3>实时输出</h3>
+                <pre class="runtime-log" id="runtime-log"></pre>
+              </article>
+            </div>
+            <div class="artifact-head">
+              <h3>产物文件</h3>
+              <span id="artifact-count">0 个文件</span>
+            </div>
+            <div class="artifact-list" id="artifact-list"></div>
+          </section>
+
+          <section class="detail-grid">
+            <article class="panel detail-summary">
+              <h2>任务概览</h2>
+              <div class="summary-grid" id="detail-summary"></div>
+            </article>
+            <article class="panel detail-score-card">
+              <h2>报告摘要</h2>
+              <strong id="detail-score">83.5</strong>
+              <span id="detail-grade">一等奖冲刺区间</span>
+            </article>
+          </section>
+
+          <section class="detail-grid">
+            <article class="panel">
+              <h2>上传材料</h2>
+              <div class="file-list" id="detail-files"></div>
+              <input id="detail-file-input" type="file" hidden />
+            </article>
+            <article class="panel">
+              <h2>分析进度</h2>
+              <ol class="progress-list" id="detail-progress"></ol>
+            </article>
+          </section>
+
+          <section class="detail-grid">
+            <article class="panel">
+              <h2 id="detail-award-title">奖项概率</h2>
+              <div class="award-list" id="detail-awards"></div>
+            </article>
+            <article class="panel">
+              <h2 id="detail-advice-title">诊断建议</h2>
+              <div class="advice-list" id="detail-advice"></div>
+            </article>
+          </section>
+
+          <section class="panel report-panel">
+            <div class="report-headline">
+              <div>
+                <h2 id="report-title">检测报告</h2>
+                <p id="report-lead">按赛事规则、论文质量、代码复现与结果可信度生成。</p>
+              </div>
+              <span id="report-badge">正式报告预览</span>
+            </div>
+            <div class="report-kpis" id="report-kpis"></div>
+          </section>
+
+          <section class="detail-grid">
+            <article class="panel">
+              <h2>关键风险项</h2>
+              <div class="risk-list" id="detail-risks"></div>
+            </article>
+            <article class="panel">
+              <h2>证据依据</h2>
+              <div class="evidence-list" id="detail-evidence"></div>
+            </article>
+          </section>
+
+          <section class="panel report-preview">
+            <h2>报告预览</h2>
+            <div class="report-preview-body" id="report-preview"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="confirm-modal" id="delete-modal" aria-hidden="true">
+      <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+        <h2 id="delete-title">是否确认删除该记录</h2>
+        <p id="delete-record-name">删除后该工作流记录将不再显示。</p>
+        <div class="confirm-actions">
+          <button class="ghost-button" id="cancel-delete" type="button">取消</button>
+          <button class="danger-button" id="confirm-delete" type="button">确认删除</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirm-modal" id="info-modal" aria-hidden="true">
+      <div class="confirm-dialog info-dialog" role="dialog" aria-modal="true" aria-labelledby="info-title">
+        <h2 id="info-title">设置</h2>
+        <div class="info-body" id="info-body"></div>
+        <div class="confirm-actions single">
+          <button class="primary-button" id="info-close" type="button">知道了</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="archive-toast" id="archive-toast" role="status" aria-live="polite">
+      <span id="archive-toast-text">已归档</span>
+      <button id="undo-archive" type="button">撤销</button>
+    </div>
+
+    <script src="app.js?v=sqlite-v05"></script>
+  </body>
+</html>
